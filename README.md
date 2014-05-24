@@ -1,11 +1,11 @@
 # generator-lemonstand 
 
-Yeoman generator that scaffolds out a [Lemonstand](http://lemonstand.com) theme and syncs it with Lemonsync.
+Yeoman generator that scaffolds out a [LemonStand](http://lemonstand.com) theme and syncs it with [LemonSync](https://github.com/lemonstand/lemonsync).
 
 
 ## Getting Started
 
-If you already have LemonSync installed and a Lemonstand store set up...
+If you already have LemonSync installed and a LemonStand store set up...
 
 - Install: `npm install -g generator-lemonstand`
 - Run: `yo lemonstand`
