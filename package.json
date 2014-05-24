@@ -1,6 +1,6 @@
 {
   "name": "generator-lemonstand",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Yeoman generator that scaffolds out a Lemonstand theme.",
   "license": "MIT",
   "repository": "hotmeteor/generator-lemonstand",
@@ -10,15 +10,29 @@
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
   },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "files": [
+    "app"
+  ],
   "keywords": [
     "yeoman-generator",
     "lemonstand",
     "theme"
   ],
   "dependencies": {
-    "chalk": "^0.4.0",
+    "yeoman-generator": "~0.16.0",
+    "cheerio": "~0.13.0",
     "mkdirp": "^0.5.0",
-    "yeoman-generator": "^0.17.0",
-    "yosay": "^0.2.1"
+    "chalk": "~0.4.0",
+    "yosay": "^0.1.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0",
+    "generator-mocha": ">=0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
   }
 }
