@@ -1,14 +1,13 @@
 'use strict';
 
-var util 	= require('util');
-var fs 		= require('fs');
-var mkdirp 	= require('mkdirp');
-var path 	= require('path');
-// var exec = require('child_process').exec;
-var spawn 	= require('child_process').spawn;
-var yeoman 	= require('yeoman-generator');
-var yosay 	= require('yosay');
-var chalk 	= require('chalk');
+var util = require('util');
+var fs = require('fs');
+var mkdirp = require('mkdirp');
+var path = require('path');
+var spawn = require('child_process').spawn;
+var yeoman = require('yeoman-generator');
+var yosay = require('yosay');
+var chalk = require('chalk');
 
 var Config = require('../util/config');
 
@@ -41,10 +40,6 @@ function Generator(args, options) {
 
 	this.pkg = require('../package.json');
 
-	// this.pkg = JSON.parse(this.readFileAsString(
-	// 	path.join(process.cwd(), '../package.json')
-	// ));
-
 	// Load the config files
 	this.conf = new Config();
 
@@ -56,16 +51,17 @@ function Generator(args, options) {
 
 util.inherits(Generator, yeoman.generators.Base);
 
-Generator.prototype.askFor = function askFor() {
+Generator.prototype.bringOnTheInfo = function() {
+
 	var done = this.async();
 	var that = this;
 
 	// welcome message
 	if (!this.options['skip-welcome-message']) {
 		this.log(yosay());
-		this.log(chalk.magenta(
+		this.log('\n' + chalk.magenta(
 			'Hello! Ready to setup your Lemonstand theme? Good, here we go!'
-		));
+		) + '\n');
 	}
 
 	// Prompt for answers.
@@ -111,9 +107,62 @@ Generator.prototype.askFor = function askFor() {
 	}.bind(this));
 };
 
-// Create the config file.
-Generator.prototype.configFile = function configFile() {
-	this.template('config.cfg');
+
+Generator.prototype.makeMeAConfig = function() {
+
+	// var done = this.async();
+	var that = this;
+	this.template('config.cfg.tpl', 'config.cfg');
+
+	// https://github.com/yeoman/generator/issues/233#issuecomment-17872311
+	this.conflicter.resolve(function(err) {
+		if (err) return console.log(err);
+		that.mkdir(that.conf.get('themeFolder'));
+		console.log('Created LemonSync config.cfg and theme folder');
+	});
+};
+
+// Create the folder and sync down the theme
+Generator.prototype.lemonSync = function() {
+
+	var done = this.async();
+	var that = this;
+
+	console.log('\n\n' +
+		chalk.black.bgYellow('Installing your lemony theme!') +
+		'\n');
+
+	var lemonsync = spawn('lemonsync', ['--config=' + path.join(that.conf.get('themeFolder'), '../config.cfg'), '--reset=local']);
+	lemonsync.stdin.setEncoding = 'utf-8';
+	lemonsync.stdout.on('data', function(data) {
+		var str = data.toString();
+		var lines = str.split(/(\r?\n)/g);
+		console.log(str);
+
+		for (var i = 0; i < lines.length; i++) {
+			if(lines[i].match(/(LemonSync is listening to changes)/m)) {
+				lemonsync.kill();
+				done();
+			}
+		}
+	});
+
+	lemonsync.stdout.on('end', function() {
+		console.log('\n' +
+			chalk.black.bgYellow('Sync complete.') +
+			'\n\n');
+	});
+
+	lemonsync.on('exit', function(code) {
+		// console.log('lemonsync exit');
+	});
+
+	lemonsync.on('error', function(err) {
+		console.log('error: ' + err);
+	});
+
+	// Say [Y]es!
+	lemonsync.stdin.write("Y\n");
 };
 
 Generator.prototype.gruntfile = function gruntfile() {
@@ -207,48 +256,16 @@ Generator.prototype.app = function app() {
 	}
 };
 
-// Create the folder and sync down the theme
-Generator.prototype.letThereBeLight = function() {
+// Save settings to .yeopress file
+Generator.prototype.saveSettings = function saveSettings() {
 
-	var that = this;
-	// var done = this.async();
+	console.log('Writing .lemonstand file');
+	fs.writeFileSync('.lemonstand', JSON.stringify(this.conf.get(), null, '\t'));
 
-	var sys = require('sys')
-
-	mkdirp(that.conf.get('themeFolder'), function(err) {
-
-		if (err) {
-			console.error(err);
-		} else {
-			console.log('pow!');
-
-			var lemonsync = spawn('lemonsync', ['--config=' + path.join(that.conf.get('themeFolder'), '../config.cfg'), '--reset=local']);
-
-			lemonsync.stdout.on('data', function(data) {
-				// console.log(data);
-			});
-
-			lemonsync.stderr.on('data', function(data) {
-				// console.log('stderr: ' + data);
-			});
-
-			lemonsync.on('close', function(code) {
-				if (code !== 0) {
-					console.log('lemonsync process exited with code ' + code);
-				}
-			});
-
-			setTimeout(function() {
-				lemonsync.stdin.write("Y\n");				
-  				lemonsync.stdin.end();
-			}, 1000);
-		}
-	});
 };
 
+Generator.prototype.finalCountdown = function () {
 
-
-Generator.prototype.install = function() {
 	if (this.options['skip-install']) {
 		return;
 	}
@@ -261,10 +278,12 @@ Generator.prototype.install = function() {
 	});
 };
 
-// Save settings to .yeopress file
-Generator.prototype.saveSettings = function() {
+Generator.prototype.makeLemonade = function() {
+	console.log('\n' +
+		chalk.black.bgYellow('All done! Now go make some lemonade.') +
+		'\n\n');
 
-	console.log('Writing .lemonstand file');
-	fs.writeFileSync('.lemonstand', JSON.stringify(this.conf.get(), null, '\t'));
-
+	// this.logger.log(chalk.bold.green('\nAll Done!!\n------------------------\n'), {logPrefix: ''});
+	// this.logger.log('I tried my best to set things up, but I\'m only human right? **wink wink**\nSo, you should probably check your `wp-config.php` to make sure all the settings work on your environment.', {logPrefix: ''});
+	// this.logger.log('Have fun pressing your words!\n', {logPrefix: ''});
 };
