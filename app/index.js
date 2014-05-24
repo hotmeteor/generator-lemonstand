@@ -42,11 +42,6 @@ function Generator(args, options) {
 
 	// Load the config files
 	this.conf = new Config();
-
-	this.conf.set('themeName', 'surfsup-theme');
-	this.conf.set('apiKey', 'GrOMHYd14LqL7Vk2G5qsuiC3epu7sR98XMjWOOAn');
-	this.conf.set('accessToken', 'n4HzZOnIj9vlKuMbfiBgesO9lEyOKpqibBz3Znh5');
-	this.conf.set('storeHost', 'surfsup.lemonstand.com');
 };
 
 util.inherits(Generator, yeoman.generators.Base);
