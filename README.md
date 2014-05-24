@@ -1,16 +1,18 @@
 # generator-lemonstand 
 
-Yeoman generator that scaffolds out a Lemonstand theme.
+Yeoman generator that scaffolds out a [Lemonstand](http://lemonstand.com) theme and syncs it with Lemonsync.
 
 
-## Installation
+## Getting Started
 
-Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
+If you already have LemonSync installed and a Lemonstand store set up...
 
-```sh
-npm install generator-lemonstand --save
-```
+- Install: `npm install -g generator-lemonstand`
+- Run: `yo lemonstand`
+- Run `grunt` for building and `grunt serve` for preview[*](#serve-note). `--allow-remote` option for remote access.
+- Run `lemonsync --config=config.cfg` to sync up your theme as you work on it.
 
+Full installation_ notes are available in the wiki_.
 
 
 ## License
