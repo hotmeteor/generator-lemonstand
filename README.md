@@ -12,7 +12,7 @@ If you already have LemonSync installed and a Lemonstand store set up...
 - Run `grunt` for building and `grunt serve` for preview[*](#serve-note). `--allow-remote` option for remote access.
 - Run `lemonsync --config=config.cfg` to sync up your theme as you work on it.
 
-Full installation_ notes are available in the wiki_.
+Full [installation](https://github.com/hotmeteor/generator-lemonstand/wiki/Installation) notes are available in the [wiki](https://github.com/hotmeteor/generator-lemonstand/wiki).
 
 
 ## License
