@@ -20,3 +20,10 @@ Full [installation](https://github.com/hotmeteor/generator-lemonstand/wiki/Insta
 MIT
 
 Adam Campbell (@hotmeteor)
+
+## TODO
+
+- Install theme from git
+- Optional force-sync theme with remote
+- Update partials to refer to assets
+- Create sub-generators
