@@ -2,6 +2,7 @@
 
 Yeoman generator that scaffolds out a [LemonStand](http://lemonstand.com) theme and syncs it with [LemonSync](https://github.com/lemonstand/lemonsync).
 
+[![NPM version](https://badge.fury.io/js/generator-lemonstand.svg)](http://badge.fury.io/js/generator-lemonstand)
 
 ## Getting Started
 
