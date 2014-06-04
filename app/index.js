@@ -10,7 +10,6 @@ var chalk = require('chalk');
 
 var Config = require('../util/config');
 
-
 var Generator = module.exports = function Generator(args, options) {
     yeoman.generators.Base.apply(this, arguments);
 
@@ -35,6 +34,8 @@ var Generator = module.exports = function Generator(args, options) {
     this.options = options;
 
     this.pkg = require('../package.json');
+
+    this.configFile = 'lemonsync.cfg';
 
     // Load the config files
     this.conf = new Config();
@@ -107,13 +108,13 @@ Generator.prototype.makeMeAConfig = function makeMeAConfig() {
     var done = this.async();
     var that = this;
 
-    that.template('config.cfg');
+    that.template(that.configFile);
 
     // https://github.com/yeoman/generator/issues/233#issuecomment-17872311
     this.conflicter.resolve(function(err) {
         if (err) return console.log(err);
         that.mkdir(that.conf.get('themeFolder'));
-        console.log('Created LemonSync config.cfg and theme folder');
+        console.log('Created LemonSync lemonsync.cfg and theme folder');
         done();
     });
 };
@@ -128,7 +129,7 @@ Generator.prototype.lemonSync = function lemonSync() {
         chalk.black.bgYellow('Installing your lemony theme!') +
         '\n');
 
-    var lemonsync = spawn('lemonsync', ['--config=' + path.join(that.conf.get('themeFolder'), '../config.cfg'), '--reset=local']);
+    var lemonsync = spawn('lemonsync', ['--config=' + path.join(that.conf.get('themeFolder'), '../' + that.configFile), '--reset=local']);
     lemonsync.stdin.setEncoding = 'utf-8';
     lemonsync.stdout.on('data', function(data) {
         var str = data.toString();

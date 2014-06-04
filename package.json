@@ -3,7 +3,10 @@
   "version": "0.2.0",
   "description": "Yeoman generator that scaffolds out a Lemonstand theme.",
   "license": "MIT",
-  "repository": "hotmeteor/generator-lemonstand",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hotmeteor/generator-lemonstand"
+  },
   "author": "Adam Campbell (@hotmeteor)",
   "main": "app/index.js",
   "engines": {
@@ -34,5 +37,12 @@
   },
   "devDependencies": {
     "mocha": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/hotmeteor/generator-lemonstand/issues"
+  },
+  "homepage": "https://github.com/hotmeteor/generator-lemonstand",
+  "directories": {
+    "test": "test"
   }
 }

@@ -1,0 +1,136 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/Adam/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+12 verbose folder .
+13 info prepublish generator-lemonstand@0.2.0
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/Adam/.npm/1f1177db-tar.lock
+16 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+17 verbose lock tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz /Users/Adam/.npm/ac235273-92559-0-6445136670954525-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+21 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+22 verbose tar unpack /var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+23 silly lockFile 83bcb5be-nerator-lemonstand-0-2-0-package tar:///Users/Adam/.npm/generator-lemonstand/0.2.0/package
+24 verbose lock tar:///Users/Adam/.npm/generator-lemonstand/0.2.0/package /Users/Adam/.npm/83bcb5be-nerator-lemonstand-0-2-0-package.lock
+25 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+26 verbose lock tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz /Users/Adam/.npm/ac235273-92559-0-6445136670954525-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry app/index.js
+31 silly gunzTarPerm extractEntry app/prompts.js
+32 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+33 silly gunzTarPerm extractEntry app/templates/gitattributes
+34 silly gunzTarPerm extractEntry app/templates/_bower.json
+35 silly gunzTarPerm extractEntry app/templates/_package.json
+36 silly gunzTarPerm extractEntry app/templates/config.cfg
+37 silly gunzTarPerm extractEntry app/templates/editorconfig
+38 silly gunzTarPerm extractEntry app/templates/favicon.ico
+39 silly gunzTarPerm extractEntry app/templates/404.html
+40 silly gunzTarPerm extractEntry app/templates/gitignore
+41 silly gunzTarPerm extractEntry app/templates/htaccess
+42 silly gunzTarPerm extractEntry app/templates/index.html
+43 silly gunzTarPerm extractEntry app/templates/jshintrc
+44 silly gunzTarPerm extractEntry app/templates/main.css
+45 silly gunzTarPerm extractEntry app/templates/main.scss
+46 silly gunzTarPerm extractEntry app/templates/robots.txt
+47 silly lockFile 83bcb5be-nerator-lemonstand-0-2-0-package tar:///Users/Adam/.npm/generator-lemonstand/0.2.0/package
+48 silly lockFile 83bcb5be-nerator-lemonstand-0-2-0-package tar:///Users/Adam/.npm/generator-lemonstand/0.2.0/package
+49 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+50 silly lockFile ac235273-92559-0-6445136670954525-tmp-tgz tar:///var/folders/j3/7_4mwxvd72g2_nkflvz9b74r0000gn/T/npm-77394-hgfw-ZEp/1401038092559-0.6445136670954525/tmp.tgz
+51 silly lockFile 3a52ce78- .
+52 silly lockFile 3a52ce78- .
+53 silly publish { name: 'generator-lemonstand',
+53 silly publish   version: '0.2.0',
+53 silly publish   description: 'Yeoman generator that scaffolds out a Lemonstand theme.',
+53 silly publish   license: 'MIT',
+53 silly publish   repository:
+53 silly publish    { type: 'git',
+53 silly publish      url: 'git://github.com/hotmeteor/generator-lemonstand' },
+53 silly publish   author: { name: 'Adam Campbell', url: '@hotmeteor' },
+53 silly publish   main: 'app/index.js',
+53 silly publish   engines: { node: '>=0.10.0', npm: '>=1.2.10' },
+53 silly publish   scripts: { test: 'mocha --reporter spec' },
+53 silly publish   files: [ 'app' ],
+53 silly publish   keywords: [ 'yeoman-generator', 'lemonstand', 'theme' ],
+53 silly publish   dependencies:
+53 silly publish    { 'yeoman-generator': '~0.16.0',
+53 silly publish      cheerio: '~0.13.0',
+53 silly publish      mkdirp: '^0.5.0',
+53 silly publish      chalk: '~0.4.0',
+53 silly publish      yosay: '^0.1.0' },
+53 silly publish   peerDependencies: { yo: '>=1.0.0', 'generator-mocha': '>=0.1.0' },
+53 silly publish   devDependencies: { mocha: '*' },
+53 silly publish   bugs: { url: 'https://github.com/hotmeteor/generator-lemonstand/issues' },
+53 silly publish   homepage: 'https://github.com/hotmeteor/generator-lemonstand',
+53 silly publish   directories: { test: 'test' },
+53 silly publish   readme: '# generator-lemonstand \n\nYeoman generator that scaffolds out a [LemonStand](http://lemonstand.com) theme and syncs it with [LemonSync](https://github.com/lemonstand/lemonsync).\n\n\n## Getting Started\n\nIf you already have LemonSync installed and a LemonStand store set up...\n\n- Install: `npm install -g generator-lemonstand`\n- Run: `yo lemonstand`\n- Run `grunt` for building and `grunt serve` for preview[*](#serve-note). `--allow-remote` option for remote access.\n- Run `lemonsync --config=config.cfg` to sync up your theme as you work on it.\n\nFull [installation](https://github.com/hotmeteor/generator-lemonstand/wiki/Installation) notes are available in the [wiki](https://github.com/hotmeteor/generator-lemonstand/wiki).\n\n\n## License\n\nMIT\n\nAdam Campbell (@hotmeteor)\n',
+53 silly publish   readmeFilename: 'README.md',
+53 silly publish   _id: 'generator-lemonstand@0.2.0',
+53 silly publish   _shasum: '3508ce9fc8f87944712cdf86a6cf7d6c37acb96b',
+53 silly publish   _from: '.' }
+54 verbose url raw generator-lemonstand
+55 verbose url resolving [ 'https://registry.npmjs.org/', './generator-lemonstand' ]
+56 verbose url resolved https://registry.npmjs.org/generator-lemonstand
+57 info trying registry request attempt 1 at 12:14:53
+58 http PUT https://registry.npmjs.org/generator-lemonstand
+59 http 403 https://registry.npmjs.org/generator-lemonstand
+60 verbose headers { date: 'Sun, 25 May 2014 17:14:54 GMT',
+60 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+60 verbose headers   'content-type': 'application/json',
+60 verbose headers   'cache-control': 'max-age=1',
+60 verbose headers   'content-length': '3849',
+60 verbose headers   'accept-ranges': 'bytes',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   'x-served-by': 'cache-iad2128-IAD',
+60 verbose headers   'x-cache': 'MISS',
+60 verbose headers   'x-cache-hits': '0',
+60 verbose headers   'x-timer': 'S1401038094.350121,VS0,VE305',
+60 verbose headers   'keep-alive': 'timeout=10, max=50',
+60 verbose headers   connection: 'Keep-Alive' }
+61 error publish Failed PUT 403
+62 error Error: forbidden cannot modify pre-existing version: 0.2.0
+62 error old={"name":"generator-lemonstand","version":"0.2.0","description":"Yeoman generator that scaffolds out a Lemonstand theme.","license":"MIT","repository":{"type":"git","url":"git://github.com/hotmeteor/generator-lemonstand"},"author":{"name":"Adam Campbell","url":"@hotmeteor"},"main":"app/index.js","engines":{"node":">=0.10.0","npm":">=1.2.10"},"scripts":{"test":"mocha --reporter spec"},"files":["app"],"keywords":["yeoman-generator","lemonstand","theme"],"dependencies":{"yeoman-generator":"~0.16.0","cheerio":"~0.13.0","mkdirp":"^0.5.0","chalk":"~0.4.0","yosay":"^0.1.0"},"peerDependencies":{"yo":">=1.0.0","generator-mocha":">=0.1.0"},"devDependencies":{"mocha":"*"},"bugs":{"url":"https://github.com/hotmeteor/generator-lemonstand/issues"},"homepage":"https://github.com/hotmeteor/generator-lemonstand","directories":{"test":"test"},"_id":"generator-lemonstand@0.2.0","_shasum":"0701bb5615686996ba54c65f6a0d258d73afdb9f","_from":"./","_npmVersion":"1.4.9","_npmUser":{"name":"hotmeteor","email":"adam@hotmeteor.com"},"maintainers":[{"name":"hotmeteor","email":"adam@hotmeteor.com"}],"dist":{"shasum":"0701bb5615686996ba54c65f6a0d258d73afdb9f","tarball":"http://registry.npmjs.org/generator-lemonstand/-/generator-lemonstand-0.2.0.tgz"}}
+62 error new={"name":"generator-lemonstand","version":"0.2.0","description":"Yeoman generator that scaffolds out a Lemonstand theme.","license":"MIT","repository":{"type":"git","url":"git://github.com/hotmeteor/generator-lemonstand"},"author":{"name":"Adam Campbell","url":"@hotmeteor"},"main":"app/index.js","engines":{"node":">=0.10.0","npm":">=1.2.10"},"scripts":{"test":"mocha --reporter spec"},"files":["app"],"keywords":["yeoman-generator","lemonstand","theme"],"dependencies":{"yeoman-generator":"~0.16.0","cheerio":"~0.13.0","mkdirp":"^0.5.0","chalk":"~0.4.0","yosay":"^0.1.0"},"peerDependencies":{"yo":">=1.0.0","generator-mocha":">=0.1.0"},"devDependencies":{"mocha":"*"},"bugs":{"url":"https://github.com/hotmeteor/generator-lemonstand/issues"},"homepage":"https://github.com/hotmeteor/generator-lemonstand","directories":{"test":"test"},"readme":"# generator-lemonstand \u000a\u000aYeoman generator that scaffolds out a [LemonStand](http://lemonstand.com) theme and syncs it with [LemonSync](https://github.com/lemonstand/lemonsync).\u000a\u000a\u000a## Getting Started\u000a\u000aIf you already have LemonSync installed and a LemonStand store set up...\u000a\u000a- Install: `npm install -g generator-lemonstand`\u000a- Run: `yo lemonstand`\u000a- Run `grunt` for building and `grunt serve` for preview[*](#serve-note). `--allow-remote` option for remote access.\u000a- Run `lemonsync --config=config.cfg` to sync up your theme as you work on it.\u000a\u000aFull [installation](https://github.com/hotmeteor/generator-lemonstand/wiki/Installation) notes are available in the [wiki](https://github.com/hotmeteor/generator-lemonstand/wiki).\u000a\u000a\u000a## License\u000a\u000aMIT\u000a\u000aAdam Campbell (@hotmeteor)\u000a","readmeFilename":"README.md","_id":"generator-lemonstand@0.2.0","_shasum":"3508ce9fc8f87944712cdf86a6cf7d6c37acb96b","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"hotmeteor","email":"adam@hotmeteor.com"},"maintainers":[{"name":"hotmeteor","email":"adam@hotmeteor.com"}],"dist":{"shasum":"3508ce9fc8f87944712cdf86a6cf7d6c37acb96b","tarball":"http://registry.npmjs.org/generator-lemonstand/-/generator-lemonstand-0.2.0.tgz"}}: generator-lemonstand
+62 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+62 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+62 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+62 error     at Request.EventEmitter.emit (events.js:98:17)
+62 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+62 error     at Request.EventEmitter.emit (events.js:117:20)
+62 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+62 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+62 error     at _stream_readable.js:919:16
+62 error     at process._tickCallback (node.js:419:13)
+63 error If you need help, you may report this *entire* log,
+63 error including the npm and node versions, at:
+63 error     <http://github.com/npm/npm/issues>
+64 error System Darwin 13.1.0
+65 error command "node" "/usr/local/bin/npm" "publish"
+66 error cwd /Users/Adam/Sites/generator-lemonstand
+67 error node -v v0.10.28
+68 error npm -v 1.4.9
+69 verbose exit [ 1, true ]
