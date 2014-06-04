@@ -1,6 +1,6 @@
 {
   "name": "generator-lemonstand",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Yeoman generator that scaffolds out a Lemonstand theme.",
   "license": "MIT",
   "repository": {
